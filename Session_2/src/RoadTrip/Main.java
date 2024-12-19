@@ -11,6 +11,12 @@ public class Main
         trip.addStop(34.052235, -118.243683, "Los Angeles");
         trip.addStop(36.114647, -115.172813, "Las Vegas");
 
+        trip.printGeoLocations();
+
+        System.out.println("\nStops: " + trip.getNumberOfStops());
+
+        System.out.println("Total Miles: " + trip.getTripLength());
+
     }
 
 }
