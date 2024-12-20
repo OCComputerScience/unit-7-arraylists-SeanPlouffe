@@ -1,5 +1,7 @@
 package DataPurge;
 
+import ArrayListExtensions.PrintArrayLists;
+
 import java.util.ArrayList;
 
 public class Main
@@ -9,6 +11,19 @@ public class Main
         ArrayList<String> members = new ArrayList<String>();
         addMembers(members);
 
+        PrintArrayLists.printArrayList(members);
+
+        DataPurge.removeDuplicates(members);
+
+        PrintArrayLists.printArrayList(members);
+
+        DataPurge.removeName(members,"London Braun");
+
+        PrintArrayLists.printArrayList(members);
+
+        DataPurge.correctlyFormatted(members);
+
+        PrintArrayLists.printArrayList(members);
 
     }
     public static void addMembers(ArrayList<String> emails)
