@@ -53,8 +53,9 @@ public class DataPurge
 
             for(int j = 1; j < nameList.get(i).length(); j++)
             {
-                if(nameList.get(i).charAt(j) == nameList.get(i).toUpperCase().charAt(j) && nameList.get(i).charAt(j-1) != ' ')
+                if(nameList.get(0).charAt(j) == nameList.get(0).toUpperCase().charAt(j) && nameList.get(0).substring(j-1, j) != " ")
                 {
+                    System.out.println("\"" + nameList.get(i).substring(j-1, j) + "\"");
                     System.out.println("Working if only 1");
                 }
 
