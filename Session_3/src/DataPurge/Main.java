@@ -1,8 +1,8 @@
 package DataPurge;
 
-import ArrayListExtensions.PrintArrayLists;
-
 import java.util.ArrayList;
+
+import ArrayListExtensions.PrintArrayLists;
 
 public class Main
 {
