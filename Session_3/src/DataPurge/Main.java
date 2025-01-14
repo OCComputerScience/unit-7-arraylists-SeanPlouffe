@@ -21,9 +21,7 @@ public class Main
 
         PrintArrayLists.printArrayList(members);
 
-        DataPurge.correctlyFormatted(members);
-
-        PrintArrayLists.printArrayList(members);
+        System.out.println(DataPurge.correctlyFormatted(members));
 
     }
     public static void addMembers(ArrayList<String> emails)

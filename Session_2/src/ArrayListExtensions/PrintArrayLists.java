@@ -35,4 +35,18 @@ public class PrintArrayLists
 
     }
 
+    public static void printArrayList(String[] arrayList)
+    {
+
+        System.out.print("[");
+
+        for(String element : arrayList)
+        {
+            System.out.print(element + ", ");
+        }
+
+        System.out.println("]");
+
+    }
+
 }

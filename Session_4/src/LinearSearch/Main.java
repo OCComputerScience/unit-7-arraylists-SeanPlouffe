@@ -14,5 +14,29 @@ public class Main
         array.add(7.0);
 
 
+        System.out.println(search(array, 2.9));
+
+        System.out.println(search(array, 9.9));
+
     }
+
+    private static <T> int search(ArrayList<T> arrayList, T elementToFind)
+    {
+
+        for(int i = 0; i < arrayList.size(); i++)
+        {
+
+            if(arrayList.get(i).equals(elementToFind))
+            {
+
+                return i;
+
+            }
+
+        }
+
+        return -1;
+
+    }
+
 }

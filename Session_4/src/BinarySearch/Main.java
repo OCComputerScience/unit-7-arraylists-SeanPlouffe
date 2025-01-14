@@ -14,6 +14,40 @@ public class Main
         ));
 
 
+        for(int num : sortedNumbers)
+        {
+            System.out.println(binarySearch(sortedNumbers, num));
+        }
 
     }
+
+    private static int binarySearch(ArrayList<Integer> numbers, int target)
+    {
+
+        int left = 0;
+        int right = numbers.size()-1;
+
+        for(int i = 0; i < numbers.size(); i++)
+        {
+            int mid = left + (right - left) / 2;
+
+            if (numbers.get(mid) == target) {
+                return mid;
+            } else if (target < numbers.get(mid)) {
+                right = mid;
+            } else {
+                left = mid;
+            }
+
+            if(mid == right-1)
+            {
+                return right;
+            }
+
+        }
+
+        return -1;
+
+    }
+
 }
