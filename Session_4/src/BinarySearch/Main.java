@@ -13,11 +13,14 @@ public class Main
                 78, 81, 85, 88, 89
         ));
 
+        System.out.println();
 
         for(int num : sortedNumbers)
         {
             System.out.println(binarySearch(sortedNumbers, num));
         }
+
+        System.out.println(binarySearch(sortedNumbers, 17));
 
     }
 
@@ -27,21 +30,23 @@ public class Main
         int left = 0;
         int right = numbers.size()-1;
 
-        for(int i = 0; i < numbers.size(); i++)
+        while(left <= right)
         {
             int mid = left + (right - left) / 2;
 
-            if (numbers.get(mid) == target) {
-                return mid;
-            } else if (target < numbers.get(mid)) {
-                right = mid;
-            } else {
-                left = mid;
-            }
+            int currNumber = numbers.get(mid);
 
-            if(mid == right-1)
+            if (currNumber == target)
             {
-                return right;
+                return mid;
+            }
+            else if (target < currNumber)
+            {
+                right = mid-1;
+            }
+            else
+            {
+                left = mid+1;
             }
 
         }

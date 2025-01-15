@@ -1,5 +1,7 @@
 package SelectionSort;
 
+import ArrayListExtensions.PrintArrayLists;
+
 import java.util.Arrays;
 
 public class Main
@@ -17,12 +19,57 @@ public class Main
 
         // sort first array
 
+        selectionSort(array1);
+
         // sort second array
+
+        selectionSort(array2);
 
         System.out.print("First array sorted: ");
         System.out.println(Arrays.toString(array1));
         System.out.print("Second array sorted: ");
         System.out.println(Arrays.toString(array2));
+    }
+
+    private static void selectionSort(int[] arr)
+    {
+
+        int swapCounter = 0;
+
+        for(int i = 0; i < arr.length-1; i++)
+        {
+
+            int currentMinIndex = i;
+
+            for(int j = i+1; j < arr.length; j++)
+            {
+
+                if(arr[currentMinIndex] > arr[j])
+                {
+                    currentMinIndex = j;
+                }
+
+            }
+
+            if(arr[i] != arr[currentMinIndex])
+            {
+                swapElements(arr, i, currentMinIndex);
+                swapCounter++;
+            }
+
+        }
+
+        System.out.println(swapCounter);
+
+    }
+
+    private static void swapElements(int[] arr, int firstIndex, int secondIndex)
+    {
+        if(arr.length==0) return;
+
+        int temp = arr[firstIndex];
+        arr[firstIndex] = arr[secondIndex];
+        arr[secondIndex] = temp;
     }
 
 }
