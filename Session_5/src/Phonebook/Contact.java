@@ -27,4 +27,9 @@ public class Contact
     {
         return handle;
     }
+
+    @Override
+    public String toString() {
+        return name;
+    }
 }

@@ -51,13 +51,4 @@ public class Main
 
     }
 
-    private static void swapElements(int[] arr, int firstIndex, int secondIndex)
-    {
-        if(arr.length==0) return;
-
-        int temp = arr[firstIndex];
-        arr[firstIndex] = arr[secondIndex];
-        arr[secondIndex] = temp;
-    }
-
 }

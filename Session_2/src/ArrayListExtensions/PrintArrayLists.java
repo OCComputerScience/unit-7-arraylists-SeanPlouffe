@@ -14,7 +14,7 @@ public class PrintArrayLists
 
         for(T element : arrayList)
         {
-            System.out.print(element + ", ");
+            System.out.print(element.toString() + ", ");
         }
 
         System.out.println("]");
