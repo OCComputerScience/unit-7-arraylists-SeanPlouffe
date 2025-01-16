@@ -22,6 +22,9 @@ public class Main
 
         System.out.println(binarySearch(sortedNumbers, 17));
 
+        ArrayList<Integer> empty = new ArrayList<>();
+        System.out.println(binarySearch(empty, 1));
+
     }
 
     private static int binarySearch(ArrayList<Integer> numbers, int target)

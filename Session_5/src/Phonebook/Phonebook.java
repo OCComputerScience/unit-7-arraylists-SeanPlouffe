@@ -15,8 +15,6 @@ public class Phonebook
     public void sortPhonebook()
     {
 
-        int swapCounter = 0;
-
         for(int i = 0; i < contacts.size()-1; i++)
         {
 
@@ -35,12 +33,9 @@ public class Phonebook
             if(contacts.get(i).getName().compareTo(contacts.get(currentMinIndex).getName()) != 0)
             {
                 swapElements(contacts, i, currentMinIndex);
-                swapCounter++;
             }
 
         }
-
-        System.out.println(swapCounter);
 
     }
 
@@ -58,6 +53,29 @@ public class Phonebook
     public void printPhonebook()
     {
         PrintArrayLists.printArrayList(contacts);
+    }
+
+    public void miracleSort()
+    {
+        boolean isSorted = checkIfSorted();
+
+        while(!isSorted)
+        {
+            isSorted = checkIfSorted();
+        }
+    }
+
+    private boolean checkIfSorted()
+    {
+        for(int i = 1; i < contacts.size(); i++)
+        {
+            if(contacts.get(i-1).getName().compareTo(contacts.get(i).getName()) > 0)
+            {
+                return false;
+            }
+        }
+
+        return true;
     }
 
 }
